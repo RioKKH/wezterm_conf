@@ -20,7 +20,7 @@ config.leader = { key = "Space", mods = "ALT", timeout_milliseconds = 1000 }
 
 -- テーマ
 config.color_scheme = "Tokyo Night"
--- config.color_scheme = 'Tokyo Night Moon'
+-- config.color_scheme = "Tokyo Night Moon"
 -- config.color_scheme = 'rose-pine'
 
 -- フォント
@@ -29,6 +29,9 @@ config.font_size = 10.0
 
 -- 余白（窮屈さを解消）
 config.window_padding = { left = 12, right = 12, top = 10, bottom = 8 }
+
+-- スクロールバー
+config.enable_scroll_bar = true
 
 -- タイトルバーを消してタブバーに統合
 -- config.window_decorations = 'RESIZE'
@@ -47,16 +50,17 @@ config.max_fps = 120
 config.front_end = "WebGpu"
 
 -- ベル設定
-config.audible_bell = 'Disabled'
+config.audible_bell = "Disabled"
 config.visual_bell = {
 	fade_in_function = "EaseIn",
 	fade_in_duration_ms = 75,
 	fade_out_function = "EaseOut",
 	fade_out_duration_ms = 75,
-	target = "CursorColor" -- カーソルだけ点滅。BackgroundColorなら画面全体
+	target = "CursorColor", -- カーソルだけ点滅。BackgroundColorなら画面全体
 }
 config.colors = {
 	visual_bell = "#402020",
+	scrollbar_thumb = "#3b4261", -- Tokyo Nightに合わせた色
 }
 
 config.keys = {
